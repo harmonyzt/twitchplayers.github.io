@@ -1,0 +1,31 @@
+{
+    "leaderboard":[
+        {
+            "name": "ttv_gigachad",
+            "lastPlayed": "",
+            "pmcLevel": "37",
+            "totalRaids": "97",
+            "survivedToDiedRatio": "47",
+            "killToDeathRatio": "9.41",
+            "averageLifeTime": "10:29"
+        },
+        {
+            "name": "LiveOrDie",
+            "lastPlayed": "11.03.2025",
+            "pmcLevel": "24",
+            "totalRaids": "24",
+            "survivedToDiedRatio": "47",
+            "killToDeathRatio": "9.36",
+            "averageLifeTime": "12:34"
+        },
+        {
+            "name": "freshman",
+            "lastPlayed": "11.03.2025",
+            "pmcLevel": "3",
+            "totalRaids": "4",
+            "survivedToDiedRatio": "25",
+            "killToDeathRatio": "2.67",
+            "averageLifeTime": "04:26"
+        }
+    ]
+}

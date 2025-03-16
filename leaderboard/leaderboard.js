@@ -4,7 +4,7 @@ let sortDirection = {}; // Sort direction
 // Loading data.json
 async function loadLeaderboardData() {
     try {
-        const response = await fetch('/leaderboard/js/data.json');
+        const response = await fetch('data.json');
         if (!response.ok) {
             throw new Error('Failed to load leaderboard data');
         }

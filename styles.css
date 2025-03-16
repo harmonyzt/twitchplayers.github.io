@@ -1,50 +1,50 @@
 html {
     scroll-behavior: smooth;
-  }
-  
-  * {
+}
+
+* {
     padding: 0;
     box-sizing: border-box;
-      scrollbar-color: #414558 transparent;
-      scrollbar-width: thin;
-  }
-  
-  body {
+    scrollbar-color: #414558 transparent;
+    scrollbar-width: thin;
+}
+
+body {
     background-color: #161616;
     font-size: 16px;
     margin: 0;
-  }
-  
-  .bodywrapper {
+}
+
+.bodywrapper {
     position: absolute;
     width: 100%;
     height: 100%;
     top: 200px;
-  }
-  
-  h1 {
+}
+
+h1 {
     position: relative;
     color: #b91a34;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     letter-spacing: 10px;
     text-align: center;
     margin: 20px;
-  }
+}
 
- #mainheader {
+#mainheader {
     font-size: 50px;
-  }
-  
-  h2 { 
+}
+
+h2 {
     position: relative;
     color: #eeeeee;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     letter-spacing: 6px;
     text-align: center;
     margin: 20px;
-  }
-  
-  .videodiv {
+}
+
+.videodiv {
     background-color: #141312;
     padding: calc(8rem + 40px) 0 5rem 0;
     position: relative;
@@ -55,9 +55,9 @@ html {
     text-align: left;
     min-height: 70vh;
     filter: blur(25px);
-  }
-  
-  .video-preview {
+}
+
+.video-preview {
     position: absolute;
     top: 0;
     right: 0;
@@ -66,9 +66,9 @@ html {
     overflow: hidden;
     background-attachment: fixed;
     object-fit: fill;
-  }
-  
-  .video-preview video {
+}
+
+.video-preview video {
     height: 100%;
     width: 177.77777778vh;
     min-width: 100%;
@@ -76,25 +76,25 @@ html {
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     background-attachment: fixed;
-  }
-  
-  .content_after_preview {
+}
+
+.content_after_preview {
     position: relative;
     background-color: #161616;
     height: 1000px;
     top: 250px;
-  }
-  
-  .content_after_header {
+}
+
+.content_after_header {
     position: relative;
     top: 50px;
     text-align: left;
     margin-left: 180px;
-  }
-  
-  .description {
+}
+
+.description {
     position: relative;
     text-align: left;
     top: 50px;
@@ -105,22 +105,22 @@ html {
     font-size: 24px;
     letter-spacing: 0.5px;
     line-height: 32px;
-  }
-  
-  .inst {
+}
+
+.inst {
     text-align: left;
-  }
-  
-  .desclink {
+}
+
+.desclink {
     text-decoration: none;
     color: #414558;
-  }
-  
-  .description .desclink a {
+}
+
+.description .desclink a {
     color: inherit;
-  }
-  
-  .download_buttons {
+}
+
+.download_buttons {
     position: relative;
     color: #c7c7c7;
     text-align: center;
@@ -128,13 +128,13 @@ html {
     font-weight: bold;
     top: 200px;
     text-decoration: none;
-  }
-  
-  .mainbutton {
+}
+
+.mainbutton {
     margin: 10px;
-  }
-  
-  .download_buttons a {
+}
+
+.download_buttons a {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #6fdf60;
     text-decoration: none;
@@ -143,13 +143,13 @@ html {
     border-radius: 5px;
     text-transform: uppercase;
     transition: all 300ms;
-  }
-  
-  .download_buttons a:hover {
+}
+
+.download_buttons a:hover {
     background-color: #ffffff51;
-  }
-  
-  .coded {
+}
+
+.coded {
     position: relative;
     background-color: #2e2511;
     color: #f6c65d;
@@ -157,8 +157,8 @@ html {
     padding-right: 1px;
     border-radius: 5px;
     outline: #ffe8b7 solid 1px;
-  }
-  
-  .textmodifier {
+}
+
+.textmodifier {
     color: #f6c65d;
-  }
+}

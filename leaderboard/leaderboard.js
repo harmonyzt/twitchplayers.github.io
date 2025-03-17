@@ -3,6 +3,9 @@ let sortDirection = {}; // Sort direction
 
 // Loading data.json
 async function loadLeaderboardData() {
+    const loadingNotification = document.getElementById('loadingNotification');
+    loadingNotification.style.display = 'block';
+
     try {
         const response = await fetch('data.json');
         if (!response.ok) {
@@ -17,6 +20,8 @@ async function loadLeaderboardData() {
         addSortListeners();
     } catch (error) {
         console.error('Error loading leaderboard data:', error);
+    } finally {
+        loadingNotification.style.display = 'none';
     }
 }
 
@@ -40,15 +45,36 @@ function displayLeaderboard(data) {
             nameClass = 'bronze-name';
         }
 
+        let accountIcon = '';
+        let accountColor = '';
+        switch (player.accountType) {
+            case 'EOD':
+                accountIcon = '<img src="media/EOD.png" alt="EOD" class="account-icon">';
+                accountColor = '#be8301';
+                break;
+            case 'Unheard':
+                accountIcon = '<img src="media/unheard.png" alt="Unheard" class="account-icon">';
+                accountColor = '#54d0e7';
+                break;
+        }
+
+        let twitchPlayers
+        if(player.isUsingTwitchPlayers){
+            player.twitchPlayers = '✅'
+        } else {
+            player.twitchPlayers = '❌'
+        }
+
         row.innerHTML = `
             <td class="rank ${rankClass}">${player.rank} ${player.medal}</td>
-            <td class="player-name ${nameClass}">${player.name}</td>
+            <td class="player-name ${nameClass}" style="color: ${accountColor}">${accountIcon} ${player.name}</td>
             <td>${player.lastPlayed || 'N/A'}</td>
             <td>${player.pmcLevel}</td>
             <td>${player.totalRaids}</td>
             <td class="${player.survivedToDiedRatioClass}">${player.survivedToDiedRatio}%</td>
             <td class="${player.killToDeathRatioClass}">${player.killToDeathRatio}</td>
             <td class="${player.averageLifeTimeClass}">${player.averageLifeTime}</td>
+            <td>${player.twitchPlayers}</td>
         `;
 
         tableBody.appendChild(row);
@@ -111,31 +137,37 @@ function convertTimeToSeconds(time) {
 function addColorIndicators(data) {
     data.forEach(player => {
         // Survived/Died Ratio
-        if (player.survivedToDiedRatio < 40) {
+        if (player.survivedToDiedRatio < 30) { // Less than 30%
             player.survivedToDiedRatioClass = 'bad';
-        } else if (player.survivedToDiedRatio >= 30 && player.survivedToDiedRatio < 60) {
+        } else if (player.survivedToDiedRatio >= 30 && player.survivedToDiedRatio < 55) { // 30% - 54%
             player.survivedToDiedRatioClass = 'average';
-        } else {
+        } else if (player.survivedToDiedRatio >= 55 && player.survivedToDiedRatio < 65) { // 55% - 64%
             player.survivedToDiedRatioClass = 'good';
+        } else { // 65% and above
+            player.survivedToDiedRatioClass = 'impressive';
         }
 
         // Kill/Death Ratio
-        if (player.killToDeathRatio < 5) {
+        if (player.killToDeathRatio < 5) { // Less than 5
             player.killToDeathRatioClass = 'bad';
-        } else if (player.killToDeathRatio >= 8 && player.killToDeathRatio < 12) {
+        } else if (player.killToDeathRatio >= 5 && player.killToDeathRatio < 12) { // 5 - 7.99
             player.killToDeathRatioClass = 'average';
-        } else {
+        } else if (player.killToDeathRatio >= 12 && player.killToDeathRatio < 15) { // 8 - 14.99
             player.killToDeathRatioClass = 'good';
+        } else { // 15 and above
+            player.killToDeathRatioClass = 'impressive';
         }
 
         // Average Life Time
         const lifeTimeSeconds = convertTimeToSeconds(player.averageLifeTime);
         if (lifeTimeSeconds < 300) { // Less than 5 minutes
             player.averageLifeTimeClass = 'bad';
-        } else if (lifeTimeSeconds >= 300 && lifeTimeSeconds < 900) {
+        } else if (lifeTimeSeconds >= 300 && lifeTimeSeconds < 900) { // 5 - 14.99 minutes
             player.averageLifeTimeClass = 'average';
-        } else {
+        } else if (lifeTimeSeconds >= 900 && lifeTimeSeconds < 1200) { // 15 - 19.99 minutes
             player.averageLifeTimeClass = 'good';
+        } else { // 20 minutes and above
+            player.averageLifeTimeClass = 'impressive';
         }
     });
 }
@@ -149,14 +181,15 @@ function calculateRanks(data) {
     data.forEach((player, index) => {
         player.rank = index + 1;
         if (player.rank === 1) {
-            player.medal = '🥇'; // Золотая медаль
+            player.medal = '🥇';
         } else if (player.rank === 2) {
-            player.medal = '🥈'; // Серебряная медаль
+            player.medal = '🥈';
         } else if (player.rank === 3) {
-            player.medal = '🥉'; // Бронзовая медаль
+            player.medal = '🥉';
         } else {
-            player.medal = ''; // Без медали
+            player.medal = '';
         }
+
     });
 }
 
@@ -179,7 +212,7 @@ function calculateOverallStats(data) {
     const averageKDR = (totalKDR / data.length).toFixed(2);
     const averageSurvival = (totalSurvival / data.length).toFixed(2);
 
-    // Обновляем блок статистики
+    // Update all stats
     document.getElementById('totalDeaths').textContent = totalDeaths;
     document.getElementById('totalRaids').textContent = totalRaids;
     document.getElementById('totalKills').textContent = Math.round(totalKills);
@@ -187,5 +220,5 @@ function calculateOverallStats(data) {
     document.getElementById('averageSurvival').textContent = `${averageSurvival}%`;
 }
 
-// Loading all data
+// When data loaded
 document.addEventListener('DOMContentLoaded', loadLeaderboardData);

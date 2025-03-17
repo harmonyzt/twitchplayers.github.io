@@ -7,7 +7,9 @@
             "totalRaids": "97",
             "survivedToDiedRatio": "47",
             "killToDeathRatio": "9.41",
-            "averageLifeTime": "10:29"
+            "averageLifeTime": "10:29",
+            "accountType": "",
+            "isUsingTwitchPlayers": "true"
         },
         {
             "name": "LiveOrDie",
@@ -16,7 +18,9 @@
             "totalRaids": "24",
             "survivedToDiedRatio": "47",
             "killToDeathRatio": "9.36",
-            "averageLifeTime": "12:34"
+            "averageLifeTime": "12:34",
+            "accountType": "",
+            "isUsingTwitchPlayers": "true"
         },
         {
             "name": "freshman",
@@ -25,7 +29,9 @@
             "totalRaids": "4",
             "survivedToDiedRatio": "25",
             "killToDeathRatio": "2.67",
-            "averageLifeTime": "04:26"
+            "averageLifeTime": "04:26",
+            "accountType": "",
+            "isUsingTwitchPlayers": "true"
         },
         {
             "name": "nhui",
@@ -34,7 +40,9 @@
             "totalRaids": "27",
             "survivedToDiedRatio": "55",
             "killToDeathRatio": "13.42",
-            "averageLifeTime": "14:58"
+            "averageLifeTime": "14:58",
+            "accountType": "",
+            "isUsingTwitchPlayers": "true"
         },
         {
             "name": "misery__",
@@ -43,7 +51,9 @@
             "totalRaids": "39",
             "survivedToDiedRatio": "58",
             "killToDeathRatio": "8.5",
-            "averageLifeTime": "11:23"
+            "averageLifeTime": "11:23",
+            "accountType": "Unheard",
+            "isUsingTwitchPlayers": "true"
         },
         {
             "name": "Hunter0",
@@ -52,7 +62,9 @@
             "totalRaids": "32",
             "survivedToDiedRatio": "58",
             "killToDeathRatio": "14.15",
-            "averageLifeTime": "15:11"
+            "averageLifeTime": "15:11",
+            "accountType": "",
+            "isUsingTwitchPlayers": "true"
         },
         {
             "name": "BOSINN",
@@ -61,7 +73,9 @@
             "totalRaids": "42",
             "survivedToDiedRatio": "47",
             "killToDeathRatio": "3.23",
-            "averageLifeTime": "09:51"
+            "averageLifeTime": "09:51",
+            "accountType": "Unheard",
+            "isUsingTwitchPlayers": "true"
         }
     ]
 }

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="icon" href="ico.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Twitch Players Leaderboard</title>
 </head>
@@ -27,7 +28,7 @@
             </div>
             <div class="stat-card">
                 <div class="stat-value" id="totalKills">0</div>
-                <div class="stat-label">🔫 Total Kills</div>
+                <div class="stat-label" style="text-transform: uppercase;">Total Kills</div>
             </div>
             <div class="stat-card">
                 <div class="stat-value" id="averageKDR">0.00</div>
@@ -40,6 +41,8 @@
         </div>
     </div>
 
+    <div id="loadingNotification" style="display: none;">Loading Players...</div>
+
     <table id="leaderboardTable">
         <thead>
             <tr>
@@ -51,6 +54,7 @@
                 <th data-sort="survivedToDiedRatio">Survival Rate</th>
                 <th data-sort="killToDeathRatio">K/D Ratio</th>
                 <th data-sort="averageLifeTime">Average Life Time</th>
+                <th data-sort="averageLifeTime">Using Twitch Players</th>
             </tr>
         </thead>
         <tbody>

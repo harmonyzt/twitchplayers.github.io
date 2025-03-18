@@ -1,72 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Twitch Players</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Twitch Players mod for SPT: Customize AI personalities, add Twitch streamers, and enjoy progressive difficulty scaling.">
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="icon" href="/media/ico.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css">
-</head>
 
-<body>
-    <div class="videodiv">
-        <div class="video-preview">
-            <video autoplay="" muted="" loop="" playsinline="">
-                <source src="/media/background.mp4" type="video/mp4">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Twitch Players</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" href="media/ico.ico" type="image/x-icon">
+        <script src="javascript/main.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <div class="video-overlay"></div>
+            <video autoplay muted loop playsinline>
+                <source src="/media/background.mp4" type="video/mp4"> Your browser does not support the video tag.
             </video>
-        </div>
-    </div>
-
-    <div class="bodywrapper">
-        <h1 id="mainheader" class="animate__animated animate__fadeInDown">
-            TWITCH PLAYERS
-        </h1>
-        <h2 class="animate__animated animate__fadeInDown animate__delay-1s">
-            Make your SPT raids a real challenge.
-        </h2>
-        <div class="download_buttons">
-            <a class="mainbutton" href="https://hub.sp-tarkov.com/files/file/2557-sain-twitch-players/">Download Latest (SPT 3.10.5)</a>
-            <a class="mainbutton" href="https://harmonyzt.github.io/TPLeaderboard.github.io/">Leaderboard</a>
-        </div>
-        <div class="content_after_preview">
-            <div class="below_contents">
-                <h1 class="content_after_header">
-                    <span class="textmodifier">MORE</span> THAN JUST A <span class="textmodifier">SAIN PRESET</span>
-                </h1>
-                <div class="description">
-                    Twitch Players is more than just a mod — it's a new way to experience SPT, making it as close as possible to Live EFT.
-                    Not only does it allow you to customize bot personalities and names, but it also adds Twitch streamers into the game, making every raid unique and unpredictable.
-                    On top of that, the mod comes with a SAIN Preset featuring progressive difficulty scaling: as your PMC levels up, the enemies become smarter and more challenging.
-                    This ensures the game stays exciting and demanding, even as you grow into a seasoned player. Get ready for every raid to test your skills to the limit!
-                </div><br><br>
-                <h1 id="installation" class="content_after_header">
-                    FEATURES
-                </h1>
-                <div class="description">
-                    <ul>
-                        <li><strong>Customizable AI Personalities:</strong> Tailor the behavior of AI opponents to match your preferred level of challenge.</li>
-                        <li><strong>Your Own Names Integration:</strong> Add your friends as AI opponents for and give them that Rat personality.</li>
-                        <li><strong>Progressive SAIN Difficulty Scaling:</strong> The difficulty of AI opponents scales with your PMC level, ensuring a consistently challenging experience.</li>
-                        <li><strong>Dynamic Personalities:</strong> AI opponents can have dynamically generated personalities each server start up, adding to the immersion and variety.</li>
-                        <li><strong>Compatibility with Fika:</strong> Fully compatible with Fika, ensuring smooth integration and performance.</li>
-                        <li><strong>Easy Installation and Configuring:</strong> Simple and straightforward installation process, with detailed instructions provided.</li>
-                    </ul>
-                </div><br><br>
-                <h1 class="content_after_header">
-                    PLAY SOLO OR <span class="textmodifier">WITH FRIENDS</span>
-                </h1>
-                <div class="description">
-                    Whether you prefer to go it alone or team up with friends, Twitch Players mod enhances your experience in both scenarios.
-                    The mod allows you to customize the AI behavior to suit your playstyle, making solo raids more intense and cooperative play more strategic.
-                    With the ability to add Twitch streamers as AI opponents, every raid becomes a unique and unpredictable adventure.
-                </div>
+            <h1 class="animate__animated animate__fadeInDown">TWITCH PLAYERS</h1>
+            <h2 class="animate__animated animate__fadeInDown animate__delay-1s">Make your SPT raids a real challenge.</h2>
+            <div class="buttons">
+                <a href="https://hub.sp-tarkov.com/files/file/2557-sain-twitch-players/">Download Latest (SPT 3.10.5)</a>
+                <a href="https://harmonyzt.github.io/TPLeaderboard.github.io/">Leaderboard</a>
             </div>
-        </div>
-    </div>
-</body>
+            <div class="scroll-indicator">
+                <span>Scroll for More</span>
+                <div class="arrow"></div>
+            </div>
+        </header>
+        <main>
+            <section>
+                <h2><span>MORE</span> THAN JUST A <span>SAIN PRESET</span></h2>
+                <p>Twitch Players is more than just a mod — it's a new way to experience SPT, making it as close as possible to Live EFT. Not only does it allow you to customize bot personalities and names, but it also adds Twitch streamers into the game, making every raid unique and unpredictable. On top of that, the mod comes with a SAIN Preset featuring progressive difficulty scaling: as your PMC levels up, the enemies become smarter and more challenging. This ensures the game stays exciting and demanding, even as you grow into a seasoned player. Get ready for every raid to test your skills to the limit!</p>
+            </section>
+            <section>
+                <h2><span>FEATURES</span></h2>
+                <ul>
+                    <li><strong>Customizable AI Personalities:</strong> Tailor the behavior of AI opponents to match your preferred level of challenge.</li>
+                    <li><strong>Your Own Names Integration:</strong> Add your friends as AI opponents for and give them that Rat personality.</li>
+                    <li><strong>Progressive SAIN Difficulty Scaling:</strong> The difficulty of AI opponents scales with your PMC level, ensuring a consistently challenging experience.</li>
+                    <li><strong>Dynamic Personalities:</strong> AI opponents can have dynamically generated personalities each server start up, adding to the immersion and variety.</li>
+                    <li><strong>Compatibility with Fika:</strong> Fully compatible with Fika, ensuring smooth integration and performance.</li>
+                    <li><strong>Easy Installation and Configuring:</strong> Simple and straightforward installation process, with detailed instructions provided.</li>
+                </ul>
+            </section>
+            <section>
+                <h2>PLAY SOLO OR <span>WITH FRIENDS</span></h2>
+                <p>Whether you prefer to go it alone or team up with friends, Twitch Players mod enhances your experience in both scenarios. The mod allows you to customize the AI behavior to suit your playstyle, making solo raids more intense and cooperative play more strategic. With the ability to add Twitch streamers as AI opponents, every raid becomes a unique and unpredictable adventure.</p>
+            </section>
+        </main>
+    </body>
 
-<script src="javascript/blurbg.js"></script>
 </html>

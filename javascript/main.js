@@ -15,4 +15,24 @@ function UpdateBackgroundBasedOnScrollPosition() {
         element.style.filter = "blur( " + (delta * 30) + "px )";
     }
 }
+
+
+document.addEventListener("scroll", () => {
+    const scrollIndicator = document.querySelector(".scroll-indicator");
+    const scrollPosition = window.scrollY;
+    const fadeStart = 50
+    const fadeEnd = 250;
+    let opacity = 1;
+
+    if (scrollPosition <= fadeStart) {
+        opacity = 1;
+    } else if (scrollPosition >= fadeEnd) {
+        opacity = 0;
+    } else {
+        opacity = 1 - (scrollPosition - fadeStart) / (fadeEnd - fadeStart);
+    }
+
+    scrollIndicator.style.opacity = opacity; // Применяем новое значение opacity
+});
+
 document.addEventListener("scroll", () => UpdateBackgroundBasedOnScrollPosition());

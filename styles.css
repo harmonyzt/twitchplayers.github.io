@@ -1,4 +1,3 @@
-/* Основные стили */
 :root {
     --primary: #b91a34;
     --secondary: #f6c65d;
@@ -138,7 +137,6 @@ ul li {
     margin: 5px auto;
 }
 
-/* Анимация стрелки */
 @keyframes bounce {
 
     0%,

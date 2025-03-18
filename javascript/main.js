@@ -32,7 +32,7 @@ document.addEventListener("scroll", () => {
         opacity = 1 - (scrollPosition - fadeStart) / (fadeEnd - fadeStart);
     }
 
-    scrollIndicator.style.opacity = opacity; // Применяем новое значение opacity
+    scrollIndicator.style.opacity = opacity;
 });
 
 document.addEventListener("scroll", () => UpdateBackgroundBasedOnScrollPosition());

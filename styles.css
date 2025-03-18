@@ -50,7 +50,8 @@ h1,
 h2,
 .buttons,
 .scroll-indicator,
-.download-counter {
+.download-counter,
+.testimonials {
     position: relative;
     z-index: 1;
 }
@@ -167,4 +168,58 @@ ul li {
     60% {
         transform: translateX(-50%) translateY(-5px);
     }
+}
+
+.testimonials {
+    padding: 10px 10px;
+    background: rgba(0, 0, 0, 0.3);
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.testimonials h2 {
+    color:#ffffff;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.testimonial-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 300px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    min-height: 80px;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.quote {
+    font-size: 1.1rem;
+    color: var(--text);
+    font-style: italic;
+    margin: 0;
+}
+
+.author {
+    font-size: 1rem;
+    color: var(--secondary);
+    font-weight: bold;
+    position: absolute; 
+    right: 20px;
+    bottom: 20px;
+    margin: 0;
 }

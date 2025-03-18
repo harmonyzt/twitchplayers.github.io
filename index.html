@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
         <link rel="stylesheet" href="styles.css">
         <link rel="icon" href="media/ico.ico" type="image/x-icon">
+        <script src="https://betterdiscord.app/js/vendor/countUp.min.js?v=DBxeQBHNMaYkRvB8uPOLm07cbQj54TDexlykb-Dcg28"></script>
         <script src="javascript/main.js"></script>
     </head>
 
@@ -20,8 +21,12 @@
             <h1 class="animate__animated animate__fadeInDown">TWITCH PLAYERS</h1>
             <h2 class="animate__animated animate__fadeInDown animate__delay-1s">Make your SPT raids a real challenge.</h2>
             <div class="buttons">
-                <a href="https://hub.sp-tarkov.com/files/file/2557-sain-twitch-players/">Download Latest (SPT 3.10.5)</a>
+                <a href="https://hub.sp-tarkov.com/files/file/2557-sain-twitch-players/">Download Latest</a>
                 <a href="https://harmonyzt.github.io/TPLeaderboard.github.io/">Leaderboard</a>
+            </div>
+            <div class="download-counter">
+                <span id="downloadCount">0</span>
+                <span>Downloads</span>
             </div>
             <div class="scroll-indicator">
                 <span>Scroll for More</span>
@@ -50,5 +55,13 @@
             </section>
         </main>
     </body>
-
+    <script>
+        const countUp = new CountUp('downloadCount', 7841, {
+            duration: 3,
+            separator: ',', 
+        });
+        window.onload = () => {
+            countUp.start();
+        };
+    </script>
 </html>

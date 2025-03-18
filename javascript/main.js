@@ -16,7 +16,6 @@ function UpdateBackgroundBasedOnScrollPosition() {
     }
 }
 
-
 document.addEventListener("scroll", () => {
     const scrollIndicator = document.querySelector(".scroll-indicator");
     const scrollPosition = window.scrollY;

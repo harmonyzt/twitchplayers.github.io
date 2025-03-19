@@ -175,7 +175,8 @@ ul li {
     background: rgba(0, 0, 0, 0.3);
     text-align: center;
     border-radius: 10px;
-    margin-top: 10px;
+    margin-top: 20px;
+    z-index: 2;
 }
 
 .testimonials h2 {

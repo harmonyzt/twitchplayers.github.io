@@ -100,13 +100,16 @@ span {
 .download-counter {
     margin-top: 20px;
     font-size: 1.2rem;
-    color: var(--text);
     text-align: center;
 }
 
 .download-counter span {
     font-weight: bold;
-    color: var(--secondary);
+    color: #ffffff8e;
+}
+
+#downloadCount {
+    color:var(--secondary);
 }
 
 main {

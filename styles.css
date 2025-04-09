@@ -60,15 +60,15 @@ h2,
 h1 {
     color: var(--primary);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 3rem;
-    letter-spacing: 8px;
+    font-size: 4rem;
+    letter-spacing: 15px;
     margin: 0;
 }
 
 h2 {
     color: var(--text);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 2rem;
+    font-size: 1.5rem;
     letter-spacing: 3px;
     margin: 10px 0;
 }
@@ -96,7 +96,7 @@ span {
     display: inline-block;
     padding: 10px 20px;
     background: rgba(255, 255, 255, 0.1);
-    color: rgb(248, 255, 187);
+    color: rgb(212, 212, 212);
     text-decoration: none;
     border-radius: 5px;
     transition: background 0.3s;

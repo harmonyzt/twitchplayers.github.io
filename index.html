@@ -14,59 +14,54 @@
 
     <body>
         <header>
-            <div class="video-overlay"></div>
             <video autoplay muted loop playsinline>
                 <source src="media/background.mp4" type="video/mp4">
             </video>
             <h1 class="animate__animated animate__fadeInDown">TWITCH PLAYERS</h1>
             <h2 class="animate__animated animate__fadeInDown animate__delay-1s">Make your SPT raids a real challenge.</h2>
             <div class="buttons">
-                <div class="button-container">
+                <div class="button-container animate__animated animate__fadeIn animate__delay-1s">
                     <span class="version-label">SPT 3.11</span>
                     <a href="https://github.com/harmonyzt/All-TTV-Players-Are-Gigachads/releases/download/1.8.0/Twitch-Players-1.8.0.7z">Download Latest</a>
                 </div>
-                <div class="button-container">
+                <div class="button-container animate__animated animate__fadeIn animate__delay-1s">
                     <span class="season-label">Season 3 is here!</span>
                     <a href="https://harmonyzt.github.io/SPT-Leaderboard.github.io/">Leaderboard</a>
                 </div>
             </div>
-            <div class="download-counter">
+            <div class="download-counter animate__animated animate__fadeIn animate__delay-2s">
                 <span id="downloadCount">0</span>
                 <span>Downloads</span>
             </div>
-            <section class="testimonials">
+            <section class="testimonials animate__animated animate__fadeIn animate__delay-2s">
                 <h2>From our beloved players</h2>
                 <div class="testimonial-cards">
                     <div class="card">
-                        <p class="quote">"This mod makes me die a lot :D"</p>
-                        <p class="author">— Ru Kira</p>
+                        <p class="quote">This mod makes me die a lot :D</p>
+                        <p class="author">Ru Kira</p>
                     </div>
                     <div class="card">
-                        <p class="quote">"Tried out Twitch Streamers - SAIN preset after baby bots. Never again."</p>
-                        <p class="author">— DANKNERMAL</p>
+                        <p class="quote">Tried out Twitch Streamers - SAIN preset after baby bots. Never again.</p>
+                        <p class="author">DANKNERMAL</p>
                     </div>
                     <div class="card">
-                        <p class="quote">"Twitch players is actually insane like aimbot levels insane."</p>
-                        <p class="author">— Junko Space Mommy</p>
+                        <p class="quote">Twitch players is actually insane like aimbot levels insane.</p>
+                        <p class="author">Junko Space Mommy</p>
                     </div>
                 </div>
             </section>
-            <div class="scroll-indicator">
+            <a href="#main-content" class="scroll-indicator animate__animated animate__fadeIn animate__delay-3s">
                 <span>Scroll for More</span>
                 <div class="arrow"></div>
-            </div>
+            </a>
         </header>
-        <main>
+        <main id="main-content">
             <section>
-                <h2><span>MORE</span> THAN JUST A <span>SAIN PRESET</span></h2>
-                <p>
-                    Twitch Players is more than just a mod - it's a new way to experience SPT, making your experience with fights as close as possible to Live Escape From Tarkov.
-                    Not only does it allow you to customize bot personalities in its own way aside from SAIN but it also adds Twitch Streamers into the game, making every raid even more unique and unpredictable.
-                    On top of that, it comes with a SAIN Preset featuring Progressive Difficulty Scaling: as your PMC levels up, AI enemies become more challenging and more accurate. This ensures the game stays exciting and demanding, even as you grow into a seasoned player.
-                </p>
+                <h2><span class="highlight">MORE</span> THAN JUST A <span class="highlight">SAIN PRESET</span></h2>
+                <p> Twitch Players is more than just a mod - it's a new way to experience SPT, making your experience with fights as close as possible to Live Escape From Tarkov. Not only does it allow you to customize bot personalities in its own way aside from SAIN but it also adds Twitch Streamers into the game, making every raid even more unique and unpredictable. On top of that, it comes with a SAIN Preset featuring Progressive Difficulty Scaling: as your PMC levels up, AI enemies become more challenging and more accurate. This ensures the game stays exciting and demanding, even as you grow into a seasoned player. </p>
             </section>
             <section>
-                <h2><span>FEATURES</span></h2>
+                <h2><span class="highlight">FEATURES</span></h2>
                 <ul>
                     <li><strong>Customizable AI Personalities:</strong> Have your own way with personalities SAIN features to match your preferred level of challenge.</li>
                     <li><strong>Your Own Names Integration:</strong> Add your friends as enemies and give them that Rat personality.</li>
@@ -77,22 +72,52 @@
                 </ul>
             </section>
             <section>
-                <h2>PLAY SOLO OR <span>WITH FRIENDS</span></h2>
-                <p>
-                    Whether you prefer to go it alone or team up with friends, Twitch Players mod enhances your experience in both scenarios.
-                    The mod allows you to customize the AI behavior to suit your playstyle, making solo raids more intense and cooperative play more strategic.
-                    With the ability to add Twitch Streamers as AI opponents, every raid becomes a unique and unpredictable, sometimes, disappointing story.
-                </p>
+                <h2>PLAY SOLO OR <span class="highlight">WITH FRIENDS</span></h2>
+                <p> Whether you prefer to go it alone or team up with friends, Twitch Players mod enhances your experience in both scenarios. The mod allows you to customize the AI behavior to suit your playstyle, making solo raids more intense and cooperative play more strategic. With the ability to add Twitch Streamers as AI opponents, every raid becomes a unique, unpredictable and sometimes, disappointing story. </p>
             </section>
         </main>
     </body>
     <script>
         const countUp = new CountUp('downloadCount', 8435, {
             duration: 3,
-            separator: ',', 
+            separator: ',',
+            easingFn: (t, b, c, d) => {
+                // Custom easing function for more natural animation
+                if ((t /= d / 2) < 1) return c / 2 * t * t * t + b;
+                return c / 2 * ((t -= 2) * t * t + 2) + b;
+            }
         });
-        window.onload = () => {
-            countUp.start();
-        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Start counter when in view
+            const observer = new IntersectionObserver((entries) => {
+                if (entries[0].isIntersecting) {
+                    countUp.start();
+                    observer.unobserve(entries[0].target);
+                }
+            }, { threshold: 0.5 });
+
+            observer.observe(document.querySelector('.download-counter'));
+
+            // Add scroll reveal animations
+            const sections = document.querySelectorAll('main section');
+            sections.forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(30px)';
+                section.style.transition = 'all 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
+            });
+
+            const sectionObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            sections.forEach(section => sectionObserver.observe(section));
+        });
     </script>
+
 </html>

@@ -353,7 +353,7 @@ ul li strong {
     text-align: center;
     border-radius: 12px;
     margin-top: 40px;
-    min-width: 1200px;
+    min-width: 1600px;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
 }

@@ -21,12 +21,12 @@
             <h2 class="animate__animated animate__fadeInDown animate__delay-1s">Make your SPT raids a real challenge.</h2>
             <div class="buttons">
                 <div class="button-container animate__animated animate__fadeIn animate__delay-1s">
-                    <span class="version-label">SPT 3.11</span>
-                    <a href="https://hub.sp-tarkov.com/files/file/2557-sain-twitch-players/">Download Latest</a>
+                    <span class="version-label">SPT 4.0</span>
+                    <a href="https://forge.sp-tarkov.com/mod/1895/sain-twitch-players">Download Latest</a>
                 </div>
                 <div class="button-container animate__animated animate__fadeIn animate__delay-1s">
-                    <span class="season-label">Season 4 is here!</span>
-                    <a href="https://harmonyzt.github.io/SPT-Leaderboard.github.io/">Leaderboard</a>
+                    <span class="season-label">Season 8 is here!</span>
+                    <a href="https://sptlb.yuyui.moe/">Leaderboard</a>
                 </div>
             </div>
             <div class="download-counter animate__animated animate__fadeIn animate__delay-2s">
@@ -37,19 +37,19 @@
                 <h2>From our beloved players</h2>
                 <div class="testimonial-cards">
                     <div class="card">
-                        <p class="quote">This mod makes me die a lot :D</p>
+                        <p class="quote"> This mod makes me die a lot :D </p>
                         <p class="author">Ru Kira</p>
                     </div>
                     <div class="card">
-                        <p class="quote">Tried out Twitch Streamers - SAIN preset after baby bots. Never again.</p>
+                        <p class="quote"> Tried out Twitch Streamers - SAIN preset after baby bots. Never again. </p>
                         <p class="author">DANKNERMAL</p>
                     </div>
                     <div class="card">
-                        <p class="quote">Twitch players is actually insane like aimbot levels insane.</p>
+                        <p class="quote"> Twitch players is actually insane like aimbot levels insane. </p>
                         <p class="author">Junko Space Mommy</p>
                     </div>
                     <div class="card">
-                        <p class="quote">Is good if you’re a masochist. As soon as one of the fuckers gets into a fight with you, you lose.</p>
+                        <p class="quote"> Is good if you’re a masochist. As soon as one of the fuckers gets into a fight with you, you lose. </p>
                         <p class="author">Turok</p>
                     </div>
                 </div>
@@ -62,38 +62,33 @@
         <main id="main-content">
             <section>
                 <h2><span class="highlight">MORE</span> THAN JUST A <span class="highlight">SAIN PRESET</span></h2>
-                <p>Twitch Players is more than just a mod - it's a new, hardcore way to experience SPT, making your experience in fights as close as possible to Live Escape From Tarkov and what SAIN features. Not only does it allow you to customize bot personalities in its own way aside from SAIN but it also adds Twitch Streamers into the game, making every raid even more unpredictable. Rats, head-eyes, chads stomping Sawmill on Woods, everything will be there. On top of that, it comes with a SAIN Preset featuring Progressive Difficulty Scaling: as your PMC levels up, AI becomes more challenging and more accurate making sure your game stays demanding and never let you rest, even as you grow into a seasoned player. The only question left hanging in the air - Are you even ready for this?</p>
+                <p>Twitch Players is more than just a mod - it's a new, hardcore way to experience SPT, making your experience in fights as close as possible to Live Escape From Tarkov and what SAIN features. Not only does it allow you to customize bot personalities in its own way aside from SAIN but it also adds Twitch Streamers into the game, making every raid even more unpredictable. Rats, head-eyes, chads stomping Sawmill on Woods, you will never know what awaits you. The only question left hanging in the air - Are you even ready for this?</p>
             </section>
             <section>
                 <h2><span class="highlight">FEATURES</span></h2>
                 <ul>
                     <li><strong>Customizable SAIN Personalities:</strong> Have your own way with personalities SAIN features to match your preferred level of challenge.</li>
-                    <li><strong>Names Integration:</strong> Add your friends as enemies and give them that Rat personality.</li>
-                    <li><strong>Progressive SAIN Difficulty Scaling:</strong> The difficulty of AI scales with your PMC level, ensuring a challenging and progressive experience.</li>
+                    <li><strong>Names Integration with Bot Callsigns:</strong> Add your friends as enemies and give them that Rat personality.</li>
                     <li><strong>Dynamic Personalities:</strong> AI can have dynamically generated personalities each server start up, let it be all of them, or just Twitch Players.</li>
-                    <li><strong>Compatibility with Fika:</strong> Compatible* with Fika. (Make sure you have ModSync installed!)</li>
-                    <li><strong>Easy Installation and Configuring:</strong> Simple installation process, with automatic SAIN preset installation and updates throughout mod releases.</li>
                 </ul>
             </section>
             <section>
                 <h2>PLAY SOLO OR <span class="highlight">WITH FRIENDS</span></h2>
-                <p>Whether you prefer to go solo or team up with friends, Twitch Players mod enhances your experience in both scenarios. The mod comes with customized SAIN preset and its behavior to suit your hardcore playstyle, making solo raids more intense and cooperative play more strategic. Every raid becomes will be unique, unpredictable and sometimes, disappointing.</p>
+                <p>Whether you prefer to go solo or team up with friends, Twitch Players mod enhances your experience in both scenarios. The mod comes with customized SAIN preset and its behavior to suit your hardcore playstyle, making solo raids more intense and coop more strategic. Every raid becomes will be unique, unpredictable and sometimes, disappointing.</p>
             </section>
         </main>
     </body>
     <script>
-        const countUp = new CountUp('downloadCount', 11826, {
+        const countUp = new CountUp('downloadCount', 21889, {
             duration: 3,
             separator: ',',
             easingFn: (t, b, c, d) => {
-                // Custom easing function
                 if ((t /= d / 2) < 1) return c / 2 * t * t * t + b;
                 return c / 2 * ((t -= 2) * t * t + 2) + b;
             }
         });
 
         document.addEventListener('DOMContentLoaded', () => {
-            // Start counter when in view
             const observer = new IntersectionObserver((entries) => {
                 if (entries[0].isIntersecting) {
                     countUp.start();
@@ -103,7 +98,6 @@
 
             observer.observe(document.querySelector('.download-counter'));
 
-            // Add scroll reveal animations
             const sections = document.querySelectorAll('main section');
             sections.forEach(section => {
                 section.style.opacity = '0';
